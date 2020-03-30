@@ -5,18 +5,18 @@ body {
     font-family: sans-serif
 }
 
-  .fade-enter-active{
+  .fade-enter-active {
     transition: opacity 2s ease-out;
   }
-  .fade-enter{
+  .fade-enter {
     opacity: 0;
   }
 
-  #credits{ 
+  #credits { 
     position: absolute; right: 0; bottom:0;
   }
 
-  button{
+  button {
   padding: 5px 8px;
   text-align: center;
   background-color:#b2cccd;
