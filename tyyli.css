@@ -1,0 +1,25 @@
+body {
+    background-image: url("tausta.jpg");
+    background-color: lightblue;
+    text-align: center;
+    font-family: sans-serif
+}
+
+  .fade-enter-active{
+    transition: opacity 2s ease-out;
+  }
+  .fade-enter{
+    opacity: 0;
+  }
+
+  #credits{ 
+    position: absolute; right: 0; bottom:0;
+  }
+
+  button{
+  padding: 5px 8px;
+  text-align: center;
+  background-color:#b2cccd;
+  border: none;
+  cursor: pointer;
+  }

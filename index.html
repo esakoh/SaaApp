@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sää</title>
+    <link rel="stylesheet" href="tyyli.css">
+</head>
+<body>
+  
+
+    <div id="app">
+        <h1>Säätiedot</h1>
+        <br>
+        <!--yläpalkin pikavalinnat-->
+        <button type="button" name="button" @click="putCity('Seinäjoki')">Seinäjoki</button>
+        <button type="button" name="button" @click="putCity('Kauhajoki')">Kauhajoki</button>
+        <button type="button" name="button" @click="putCity('Tampere')">Tampere</button>
+        <button type="button" name="button" @click="putCity('Helsinki')">Helsinki</button>
+        <br><br><br>
+        <template >
+        <input type="text" autofocus name="paikka" id="paikka" placeholder="Anna paikan nimi" v-model="paikka" @keyup.enter="getCity()">
+        <input type="button" name="submit" value="Hae" @click="getCity()">
+        
+        <transition name="fade"><!--säätiedot sisältävän div-elementin häivytys-->
+            <div key="1" v-if="show"><h2><br>{{ city }}<br><img :src="img" alt="" /><br>{{ saa }}<br><br>{{ wind }}</h2></div>
+            <div key="2" v-if="!show"><h2><br>{{ city }}<br><img :src="img" alt="" /><br>{{ saa }}<br><br>{{ wind }}</h2></div>   
+        </transition>
+
+
+    </template>
+            
+    </div> 
+
+    <!--Taustakuvan krediittinappi oikeassa alakulmassa -->
+    <div id="credits">    
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" 
+        href="https://unsplash.com/@danformsma?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Dan Formsma"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" 
+        style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
+        <title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Dan Formsma</span></a>   
+    </div>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="script.js"></script>  
+
+
+  
+</body>
+</html>
