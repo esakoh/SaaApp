@@ -18,6 +18,7 @@ var app = new Vue({
       this.getCity()
    },
     methods: {
+      //annetaan haettavat kaupungit pikavalinnoille
       putCity: function(button){
       this.paikka=button;
       this.getCity();
