@@ -35,7 +35,10 @@ var app = new Vue({
 
               })
               .catch(function (error) {
-                app.city = 'Paikkaa ei löydy!'
+                app.city = 'Paikkaa ei löydy!';
+                app.saa = ''
+                app.img = ''
+                app.wind = ''
 
               })        
               
